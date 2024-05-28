@@ -22,36 +22,108 @@ html,body{
   border: 1px solid #fff;
 }
 /* flax item */
+
+.top i{
+  color: red;
+  position: relative;
+  left: 95%;
+  top: 3%;
+  font-size: 30px;
+  /* background-color: cadetblue; */
+}
+
 .top p{
   position: relative;
   left: 3%;
-  top: 40%;
+  top: 35%;
   font-family: poppins;
-  text-transform: capitalize;
+  width: fit-content;
 }
 .top h1{
   position: relative;
   color: black;
   left: 3%;
-  top: 40%;
-  font-size: 35px;
+  top: 35%;
+  font-size: 45px;
   font-family: poppins;
   text-transform: capitalize;
   word-spacing: 1px;
+  width: fit-content;
 }
 .top h3{
   position: relative;
   color: black;
   left: 3%;
-  top: 40%;
+  top: 35%;
   font-size: 18px;
   font-family: poppins;
   text-transform: capitalize;
   word-spacing: 1px;
+  width: fit-content;
 }
 
-.buttons{
-  
+.btns{
+  display: flex;
+  width: fit-content;
+}
+a{
+  position: absolute;
+  width: 160px;
+  height: 40px;
+  background-color: red;
+  color: orange;
+  border-radius: 50px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  top: 60%;
+  left: 2%;
+  color: red;
+  font-weight: bold;
+  background-color: #d1ccccaf;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-family: montserrat;
+
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+
+}
+a:hover{
+  background-color: red;
+  color: black;
+  transition: 1s;
+}
+a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #2980b9;
+  transition: left 0.5s ease-in-out;
+}
+
+a:hover::before {
+  left: 100%;
+}
+
+a:hover {
+  color: #000;
+}
+
+
+#about-section{
+  position: absolute;
+  top: 60%;
+  left: 17%;
+  width: 140px;
+  height: 40px;
 }
 
 /* img-sections */
@@ -62,7 +134,7 @@ html,body{
   background-image: url(./937d8879eafbaadb622b78c0598e1d9f.jpg);
   background-size: cover;
   background-position: center;
-  margin: 10%;
+  margin: 2%;
   margin-left: 65%;
   border-radius: 50%;
 }
@@ -162,4 +234,127 @@ html,body{
       transform: translateY(-110vh);
       opacity: 0;
   }
+}
+
+
+
+
+
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu-container {
+    text-align: center;
+}
+
+.menu-button {
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #2980b9;
+}
+
+.menu {
+    display: none;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+.menu a:last-child {
+    border-bottom: none;
+}
+
+.menu a:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+
+
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu-container {
+    text-align: center;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.menu {
+    display: none;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu a:last-child {
+    border-bottom: none;
+}
+
+.menu-toggle:checked + .menu-button + .menu {
+    display: block;
 }
